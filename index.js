@@ -10,3 +10,6 @@ console.log("Hello World");
 
 console.log("Hello Booloean");
 
+const helloWord = "Hello " + process.argv.slice(2);
+console.log(helloWord);
+
