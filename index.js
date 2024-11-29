@@ -8,8 +8,23 @@
 
 console.log("Hello World");
 
-console.log("Hello Booloean");
+console.log("Hello Boolean");
 
-const helloWord = "Hello " + process.argv.slice(2);
-console.log(helloWord);
+// Most verbose 
 
+// const myWord = process.argv[2]
+// let defaultWord = "Boolean"
+
+// if (myWord) {                --> when = true, 
+// defaultWord = myWord      // "Hello + argument in terminal"
+// }
+
+// Ternary operator --> less verbose than the conditional
+
+// let myWord = process.argv[2] !== null && process.argv[2] !== undefined ? process.argv[2] : "Boolean"
+
+// Nullish coalescing operator --> least verbose
+
+let myWord = process.argv[2] ?? "Boolean";
+
+console.log(`Hello ${myWord}`)
